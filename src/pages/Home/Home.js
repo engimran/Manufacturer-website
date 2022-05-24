@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../pages/Shared/Footer';
+import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import OurProducts from './OurProducts';
 

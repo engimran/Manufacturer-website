@@ -2,8 +2,8 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
 import Blogs from './Blogs';
-import Home from './Home/Home';
-import Login from './pages/Login';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
 import Navbar from './pages/Shared/Navbar';
 
 function App() {
