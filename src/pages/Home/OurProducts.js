@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import OrderModal from '../Order/OrderModal';
 import Product from './Product';
 
 const OurProducts = () => {
 
     const [products, setProducts] = useState([]);
+    const [order, setOrder] = useState([]);
 
     useEffect(() => {
         fetch('Products.json')
@@ -18,10 +20,14 @@ const OurProducts = () => {
                     products.map(product => <Product
                         key={product.id}
                         product={product}
+                        setOrder={setOrder}
                     ></Product>)
                 }
             </div>
-
+            {order &&
+                <OrderModal
+                    order={order}
+                    setOrder={setOrder}></OrderModal>}
 
         </div>
     );
