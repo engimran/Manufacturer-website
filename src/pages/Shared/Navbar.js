@@ -1,7 +1,17 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
+
+    const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
+    const logout = () => {
+        signOut(auth);
+        navigate('/home')
+    };
     return (
         <div className="navbar bg-primary">
             <div className="navbar-start">
@@ -22,7 +32,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/home'>Home</Link></li>
                     <li><Link to='/blogs'>Blogs</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
+                    <li>{user ? <button onClick={logout} class="btn btn-ghost">Sign Out</button> : <Link to='/login'>Login</Link>}</li>
                 </ul>
             </div>
 
