@@ -1,30 +1,34 @@
 [
     {
         "id": 1,
-        "name": "Engagement Photography",
-        "price": "10000",
-        "description": "Wedding photoshoot",
-        "img": "https://i.ibb.co/47RtzJg/img-1.jpg"
+        "name": "Motherboard",
+        "price": "2500",
+        "quantity": "200",
+        "description": "Model - Colorful Battle-AX C.H310M-PT V20, Chipset - Intel H310 Chipset, CPU Sockets - LGA1151",
+        "img": "https://i.ibb.co/rkdXW1r/motherboard.webp"
     },
     {
         "id": 2,
-        "name": "Wedding Photography",
-        "price": "30000",
-        "description": "Quality my first amin",
-        "img": "https://i.ibb.co/YdyjgMs/img-2.jpg"
+        "name": "Internal SSD",
+        "price": "2000",
+        "quantity": "500",
+        "description": "Transcend 430S 128GB SATA III M.2 2242 SSD",
+        "img": "https://i.ibb.co/jbqj8YL/ssd.webp"
     },
     {
         "id": 3,
-        "name": "Wedding Shoot",
-        "price": "1500",
-        "description": "Photoshoot",
-        "img": "https://i.ibb.co/1Mfv86g/img-3.jpg"
+        "name": "Network Switch",
+        "price": "12000",
+        "quantity": "1500",
+        "description": "Cisco SF302-08PP 8-port 10/100 PoE+ Managed Switch #SF302-08PP-K9-EU",
+        "img": "https://i.ibb.co/7rZ4csC/Network-switch.webp"
     },
     {
         "id": 4,
-        "name": "Photo shoot",
-        "price": "1800",
-        "description": "best service",
-        "img": "https://i.ibb.co/QMfNX2g/img-4.jpg"
+        "name": "Server",
+        "price": "50000",
+        "quantity": "50",
+        "description": "Ryans Server-XE31240V6 Intel Xeon E3-1240 v6 ...",
+        "img": "https://i.ibb.co/NprBVYX/Server.webp"
     }
 ]

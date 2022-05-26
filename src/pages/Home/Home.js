@@ -5,11 +5,9 @@ import OurProducts from './OurProducts';
 
 const Home = () => {
     return (
-        <div className='py-12'>
+        <div className=''>
             <Banner></Banner>
             <OurProducts></OurProducts>
-
-
             <Footer></Footer>
 
         </div>
