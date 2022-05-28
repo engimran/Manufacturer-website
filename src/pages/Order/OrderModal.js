@@ -23,7 +23,7 @@ const OrderModal = ({ order, setOrder }) => {
 
         };
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://arcane-tundra-12894.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -41,9 +41,9 @@ const OrderModal = ({ order, setOrder }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="order-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
+            <input type="checkbox" id="order-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
                     <div className='grid justify-center items-center'>
                         <img className='w-48' src={img} alt="" />
 
@@ -51,21 +51,21 @@ const OrderModal = ({ order, setOrder }) => {
 
 
                     <form onSubmit={handleOrder} className='grid grid-cols-1 gap-4 justify-items-center '>
-                        <h3 class="font-bold  text-lg">Product Name:{name}</h3>
-                        <input type="text" disabled value={user?.displayName} class="input w-full max-w-xs" />
-                        <input type="text" email='email' disabled value={user?.email} class="input w-full max-w-xs" />
+                        <h3 className="font-bold  text-lg">Product Name:{name}</h3>
+                        <input type="text" disabled value={user?.displayName} className="input w-full max-w-xs" />
+                        <input type="text" email='email' disabled value={user?.email} className="input w-full max-w-xs" />
                         <label className=''>Available Quantity</label>
-                        <input type="text" value={quantity} class="input w-full max-w-xs" />
+                        <input type="text" value={quantity} className="input w-full max-w-xs" />
                         <label className=''>Unit Price</label>
-                        <input type="text" name='price' value={price} class="input w-full max-w-xs" />
+                        <input type="text" name='price' value={price} className="input w-full max-w-xs" />
                         <label className=''>Order Quantity</label>
-                        <input type="text" name='quantity' class="input w-full max-w-xs" />
+                        <input type="text" name='quantity' className="input w-full max-w-xs" />
                         <label className=''>Phone Number</label>
-                        <input type="text" name='phone' placeholder="Type here phone number" class="input w-full max-w-xs" />
-                        <input type="submit" value="Submit" class="input w-full max-w-xs btn btn-secondary" />
+                        <input type="text" name='phone' placeholder="Type here phone number" className="input w-full max-w-xs" />
+                        <input type="submit" value="Submit" className="input w-full max-w-xs btn btn-secondary" />
                     </form>
 
-                    <label for="order-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <label for="order-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                 </div>
             </div>
 

@@ -8,13 +8,13 @@ const OurProducts = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://arcane-tundra-12894.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
     return (
         <div>
-            <h2>Our Products</h2>
+            <h2 className='text-accent text-center font-bold text-3xl'>Our Products</h2>
             <div className='flex grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5'>
                 {
                     products.map(product => <Product

@@ -21,7 +21,7 @@ const SignUp = () => {
 
     let signInErrorMessage;
     if (loading || sLoading || updating) {
-        return <button class="btn btn-square loading"></button>
+        return <button className="btn btn-square loading"></button>
     }
     if (error || sError || upError) {
         signInErrorMessage = <p className='text-red-500'>{error?.message || sError?.message || upError.message}</p>
@@ -60,7 +60,7 @@ const SignUp = () => {
                             })}
                         />
                         <label>
-                            {errors.name?.type === 'required' && <span class="label-text-alt text-red-500">{errors.name.message}</span>}
+                            {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
 
                         </label>
 
@@ -84,8 +84,8 @@ const SignUp = () => {
                             })}
                         />
                         <label>
-                            {errors.email?.type === 'required' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
-                            {errors.email?.type === 'pattern' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
+                            {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+                            {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                         </label>
 
                     </div>
@@ -107,9 +107,9 @@ const SignUp = () => {
                                     message: 'Must be 6 Character'
                                 }
                             })} />
-                        <label class="label">
-                            {errors.password?.type === 'required' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
-                            {errors.password?.type === 'minLength' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
+                        <label className="label">
+                            {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                            {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
 
                         </label>
 

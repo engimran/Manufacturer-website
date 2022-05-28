@@ -8,7 +8,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?email=${user.email}`)
+            fetch(`https://arcane-tundra-12894.herokuapp.com/order?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }
@@ -18,8 +18,8 @@ const MyOrder = () => {
     return (
         <div>
             <h2>My orders:{orders.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
 
                     <thead>
                         <tr>
@@ -27,7 +27,7 @@ const MyOrder = () => {
                             <th>Product Name</th>
                             <th>Order Quantity</th>
                             <th>Total value</th>
-                            <th>Payment Status</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,7 +37,9 @@ const MyOrder = () => {
                                 <td>{order.orderName}</td>
                                 <td>{order.orderQty}</td>
                                 <td>{order.orderPrice}</td>
-                                <button className='btn btn-secondary'>paid</button>
+                                <td><button className='btn btn-secondary'>Paid</button> <button disabled className='btn btn-secondary'>Unpaid</button><button className='btn btn-primary'>Delete</button></td>
+                                <td></td>
+
                             </tr>)
                         }
 
