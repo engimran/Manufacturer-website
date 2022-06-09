@@ -4,7 +4,7 @@ const MyReview = () => {
 
     const addReview = event => {
         event.preventDefault();
-        const product = {
+        const review = {
             name: event.target.name.value,
             price: event.target.price.value,
             quantity: event.target.quantity.value,
@@ -16,7 +16,7 @@ const MyReview = () => {
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(review)
         })
             .then(res => res.json())
             .then(data => {
