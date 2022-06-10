@@ -8,7 +8,7 @@ const OurProducts = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        fetch('https://arcane-tundra-12894.herokuapp.com/product')
+        fetch('https://afternoon-eyrie-61181.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

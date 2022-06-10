@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const AddProduct = () => {
 
     const addProduct = event => {
@@ -12,7 +11,7 @@ const AddProduct = () => {
             description: event.target.description.value,
             img: event.target.img.value
         };
-        fetch('https://arcane-tundra-12894.herokuapp.com/product', {
+        fetch('https://afternoon-eyrie-61181.herokuapp.com/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

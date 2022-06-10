@@ -23,7 +23,7 @@ const OrderModal = ({ order, setOrder }) => {
 
         };
 
-        fetch('https://arcane-tundra-12894.herokuapp.com/order', {
+        fetch('https://afternoon-eyrie-61181.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
