@@ -9,15 +9,17 @@ const Review = () => {
             .then(data => setReviews(data));
     }, [])
     return (
-        <div className='mt-5'>
-            <h1 className='text-black text-center font-bold'>Client Reviews</h1>
+        <div className='mt-10 mb-5'>
+            <h1 className='text-black text-center font-bold mb-10'>Client Reviews</h1>
             {
-                reviews.map(review => <div class="avatar">
-                    <div class="w-24 rounded-full">
-                        <h1>{review.product}</h1>
-                        <img src="https://api.lorem.space/image/face?hash=92310" alt='' />
-                    </div>
-                </div>)
+                reviews.map(review =>
+                    <div class="avatar">
+                        <div class="w-24 rounded-full">
+                            <img src="https://api.lorem.space/image/face?hash=92310" alt='' />
+                        </div>
+                        <h1>{review.name}</h1>
+                        <h1>{review.comments}</h1>
+                    </div>)
             }
 
         </div>

@@ -10,7 +10,7 @@ const OrderModal = ({ order, setOrder }) => {
 
     const handleOrder = event => {
         event.preventDefault();
-        // const name = event.target.name.value;
+
 
         const order = {
             orderId: _id,

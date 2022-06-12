@@ -2,7 +2,7 @@ import React from 'react';
 
 const BusinessSummary = () => {
     return (
-        <div>
+        <div className='mt-10'>
             <h1 className='text-center font-bold text-accent text-3xl'>Business Summary</h1>
 
             <div className='flex grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5'>
