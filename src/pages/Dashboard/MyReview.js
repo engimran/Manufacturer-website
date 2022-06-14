@@ -8,7 +8,7 @@ const MyReview = () => {
             name: event.target.name.value,
             comments: event.target.comment.value,
         };
-        fetch('https://afternoon-eyrie-61181.herokuapp.com/review', {
+        fetch('http://localhost:5000/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

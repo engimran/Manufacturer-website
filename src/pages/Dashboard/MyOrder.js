@@ -1,5 +1,7 @@
+import { OAuthProvider } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrder = () => {
@@ -8,7 +10,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://afternoon-eyrie-61181.herokuapp.com/order?email=${user.email}`)
+            fetch(`http://localhost:5000/order?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }
@@ -27,7 +29,7 @@ const MyOrder = () => {
                             <th>Product Name</th>
                             <th>Order Quantity</th>
                             <th>Total value</th>
-                            <th>Action</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,8 +39,8 @@ const MyOrder = () => {
                                 <td>{order.orderName}</td>
                                 <td>{order.orderQty}</td>
                                 <td>{order.orderPrice}</td>
-                                <td><button className='btn btn-secondary'>Paid</button> <button disabled className='btn btn-secondary'>Unpaid</button><button className='btn btn-primary'>Delete</button></td>
-                                <td></td>
+                                <td>{(order.orderPrice && !order.paid) && <Link to={`/dashboard/payment/${order._id} `}> <button className='btn btn-primary'>Pay</button> </Link>}</td>
+                                <td>{(order.orderPrice && order.paid) && <span className='btn btn-primary'>Paid</span>}</td>
 
                             </tr>)
                         }
@@ -46,7 +48,7 @@ const MyOrder = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div >
     );
 };
 

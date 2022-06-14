@@ -13,10 +13,10 @@ const Product = ({ product, setOrder }) => {
         return <button className="btn btn-square loading"></button>
     }
 
-    const handleOrderPlace = id => {
+    const handleOrderPlace = product => {
 
         if (user) {
-            setOrder(id)
+            setOrder(product)
         }
         else {
             navigate('/login')
@@ -33,7 +33,7 @@ const Product = ({ product, setOrder }) => {
 
                 <div className="card-actions justify-end">
 
-                    <span><label for="order-modal" onClick={() => handleOrderPlace(_id)}
+                    <span><label for="order-modal" onClick={() => handleOrderPlace(product)}
                         className="btn btn-primary font-bold">Place Order</label></span>
 
                 </div>

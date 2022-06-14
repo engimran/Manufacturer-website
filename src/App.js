@@ -15,6 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import AllUsers from './pages/Dashboard/AllUsers';
 import AddProduct from './pages/Dashboard/AddProduct';
 import PageNotFound from './pages/PageNotFound';
+import Payment from './pages/Dashboard/Payment';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path='userprofile' element={<UserProfile></UserProfile>} ></Route>
           <Route path='users' element={<AllUsers></AllUsers>}></Route>
           <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
         </Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
