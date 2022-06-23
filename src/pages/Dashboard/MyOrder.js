@@ -34,13 +34,21 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <tr>
+                            orders.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
                                 <td>{order.orderName}</td>
                                 <td>{order.orderQty}</td>
                                 <td>{order.orderPrice}</td>
-                                <td>{(order.orderPrice && !order.paid) && <Link to={`/dashboard/payment/${order._id} `}> <button className='btn btn-primary'>Pay</button> </Link>}</td>
-                                <td>{(order.orderPrice && order.paid) && <span className='btn btn-primary'>Paid</span>}</td>
+                                <td>
+                                    {(order.orderPrice && !order.paid) && <Link to={`/dashboard/payment/${order._id} `}> <button className='btn btn-primary'>Pay</button> </Link>}
+                                    {(order.orderPrice && order.paid) &&
+                                        <div>
+                                            <p>Paid</p>
+                                            <p>Transaction Id:{order.transaction}</p>
+                                        </div>
+                                    }
+                                </td>
+
 
                             </tr>)
                         }
