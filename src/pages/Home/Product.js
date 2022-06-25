@@ -25,7 +25,7 @@ const Product = ({ product, setOrder }) => {
     }
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure><img className='p-3' src={img} alt="Album" /></figure>
+            <figure><img className='' src={img} alt="Album" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <p><span className='font-bold'>Description: </span>{description}</p>

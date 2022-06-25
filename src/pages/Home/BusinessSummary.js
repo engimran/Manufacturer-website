@@ -29,7 +29,7 @@ const BusinessSummary = () => {
                         <img src="https://i.ibb.co/CP6f8gq/revinew.jpg?w=400&h=225" alt="world" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Revenue growth Rate 30%</h2>
+                        <h2 className="card-title">Revenue Growth Rate 30%</h2>
 
                     </div>
                 </div>

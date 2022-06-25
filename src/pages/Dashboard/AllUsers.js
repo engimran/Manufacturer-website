@@ -20,17 +20,16 @@ const AllUsers = () => {
                     <thead>
                         <tr>
                             <th>Sl.No.</th>
-                            <th>User Name</th>
                             <th>User Email</th>
-                            <th>Total value</th>
-                            <th>Payment Status</th>
+                            <th>Role</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            users.map(user => <Users
+                            users.map((user, index) => <Users
                                 key={user._id}
                                 user={user}
+                                index={index}
                             ></Users>)
                         }
 

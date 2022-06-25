@@ -10,7 +10,7 @@ const Review = () => {
     }, [])
     return (
         <div className='mt-10 mb-5'>
-            <h1 className='text-black text-center font-bold mb-10'>Client Reviews</h1>
+            <h1 className='text-center font-bold text-accent text-3xl mb-10'>Client Reviews</h1>
             {
                 reviews.map(review =>
                     <div class="avatar">
