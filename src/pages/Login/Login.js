@@ -16,6 +16,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    console.log(user)
+
     let signInErrorMessage;
     if (loading || sLoading) {
         return <button className="btn btn-square loading"></button>

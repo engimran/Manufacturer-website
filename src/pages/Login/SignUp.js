@@ -15,6 +15,7 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
     const [updateProfile, updating, upError] = useUpdateProfile(auth);
     const [token] = useToken(user || sUser);
     const navigate = useNavigate();
@@ -36,7 +37,6 @@ const SignUp = () => {
         await updateProfile({ displayName: data.name });
         console.log('Update successfull');
         navigate('/home');
-
     }
 
 

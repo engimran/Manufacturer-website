@@ -33,7 +33,7 @@ const Product = ({ product, setOrder }) => {
 
                 <div className="card-actions justify-end">
 
-                    <span><label for="order-modal" onClick={() => handleOrderPlace(product)}
+                    <span><label htmlFor="order-modal" onClick={() => handleOrderPlace(product)}
                         className="btn btn-primary font-bold">Place Order</label></span>
 
                 </div>

@@ -65,7 +65,7 @@ const OrderModal = ({ order, setOrder }) => {
                         <input type="submit" value="Submit" className="input w-full max-w-xs btn btn-secondary" />
                     </form>
 
-                    <label for="order-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <label htmlFor="order-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                 </div>
             </div>
 
